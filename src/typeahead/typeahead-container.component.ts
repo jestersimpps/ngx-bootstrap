@@ -153,7 +153,7 @@ export class TypeaheadContainerComponent {
         startIdx = itemStrHelper.indexOf(query[i]);
         tokenLen = query[i].length;
         if (startIdx >= 0 && tokenLen > 0) {
-          itemStr = itemStr.substring(0, startIdx) + '<strong>' + itemStr.substring(startIdx, startIdx + tokenLen) + '</strong>' + itemStr.substring(startIdx + tokenLen);
+          itemStr = itemStr.substring(0, startIdx) +  itemStr.substring(startIdx, startIdx + tokenLen)  + itemStr.substring(startIdx + tokenLen);
           itemStrHelper = itemStrHelper.substring(0, startIdx) + '        ' + ' '.repeat(tokenLen) + '         ' + itemStrHelper.substring(startIdx + tokenLen);
         }
       }
@@ -162,7 +162,7 @@ export class TypeaheadContainerComponent {
       startIdx = itemStrHelper.indexOf(query);
       tokenLen = query.length;
       if (startIdx >= 0 && tokenLen > 0) {
-        itemStr = itemStr.substring(0, startIdx) + '<strong>' + itemStr.substring(startIdx, startIdx + tokenLen) + '</strong>' + itemStr.substring(startIdx + tokenLen);
+        itemStr = itemStr.substring(0, startIdx) + itemStr.substring(startIdx, startIdx + tokenLen)  + itemStr.substring(startIdx + tokenLen);
       }
     }
     return itemStr;
